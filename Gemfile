@@ -1,8 +1,9 @@
 source "https://rubygems.org"
-gem 'google-apis-drive_v3'   # Google Drive API client
-gem 'googleauth'             # Auth with Google service accounts
-gem 'pdf-reader'             # Extract text from PDFs
-gem 'dotenv-rails'           # Load ENV variables from .env
+gem "google-apis-drive_v3"   # Google Drive API client
+gem "googleauth"             # Auth with Google service accounts
+gem "pdf-reader"             # Extract text from PDFs
+gem "dotenv-rails"           # Load ENV variables from .env
+gem "ruby-openai"            # OpenAI API client
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # Use sqlite3 as the database for Active Record
