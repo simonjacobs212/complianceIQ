@@ -52,9 +52,8 @@ summary = client.chat(
   }
 )
 
-render json: {
-  summary: summary.dig("choices", 0, "message", "content")
-}
+render plain: summary.dig("choices", 0, "message", "content")
+
 rescue => e
   render json: { error: e.class.to_s, message: e.message }, status: 500
 end
