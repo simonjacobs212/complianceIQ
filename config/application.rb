@@ -17,6 +17,11 @@ module ComplianceiqBackend
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    if ENV["SERVICE_ACCOUNT_JSON_BASE64"]
+     decoded = Base64.decode64(ENV["SERVICE_ACCOUNT_JSON_BASE64"])
+     File.write(Rails.root.join("config", "service_account.json"), decoded)
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
