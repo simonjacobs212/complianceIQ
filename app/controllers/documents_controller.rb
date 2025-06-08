@@ -39,7 +39,22 @@ def read
     }
   )
 
-  render json: { summary: summary.dig("choices", 0, "message", "content") }
+  client = OpenAI::Client.new(access_token: ENV["OPENAI_API_KEY"])
+
+summary = client.chat(
+  parameters: {
+    model: "gpt-4",
+    messages: [
+      { role: "system", content: "You are a compliance analyst. Summarize this regulatory document in clear, actionable takeaways." },
+      { role: "user", content: text.truncate(6000) }
+    ],
+    temperature: 0.3
+  }
+)
+
+render json: {
+  summary: summary.dig("choices", 0, "message", "content")
+}
 rescue => e
   render json: { error: e.class.to_s, message: e.message }, status: 500
 end
