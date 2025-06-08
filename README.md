@@ -1,24 +1,11 @@
+<<<<<<< HEAD
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ComplianceIQ Backend
 
-Things you may want to cover:
+This is the Rails API backend for the GPT Action that extracts PDF content from Google Drive for summarization.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+=======
+# complianceIQ
+ComplianceIQ helps Bank of America's compliance, risk, and legal teams process regulatory documents faster. It summarizes guidance from bodies like the OCC, SEC, or Basel Committee and recommends internal action steps across lines of business.
+>>>>>>> f5c8c82fdc7c321367e94d7089e5a2e3056b1c7f
